@@ -1,4 +1,4 @@
-# Glaedr
+# Glaedr - forked by GGHaxorZ
 Extensive yet simplistic Scoreboard API for the Bukkit/Spigot API
 
 Project is currently not being worked on, I may update it in the future (as I do have a newer version).
