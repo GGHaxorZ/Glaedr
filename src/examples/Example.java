@@ -32,7 +32,7 @@ public class Example extends JavaPlugin implements Listener //did all that shit 
     if (!cooldownMap.contains(e.getPlayer()))
     {
       cooldownMap.add(e.getPlayer());
-      pc.setTime(16.0D);
+      pc.setTime(16.0D).setCountdown(true);
       new BukkitRunnable()
       {
         public void run()
