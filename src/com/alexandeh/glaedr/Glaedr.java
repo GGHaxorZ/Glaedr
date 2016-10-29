@@ -52,20 +52,25 @@ public class Glaedr implements Listener {
 
     public   void registerPlayers() {
         for (Player player : Bukkit.getOnlinePlayers()) {
+                    player.sendMessage("§eLoading your scoreboard...");
             long oldTime = System.currentTimeMillis();
             new PlayerScoreboard(this, player);
-            player.sendMessage(ChatColor.BLUE + "Scoreboard created in " + (System.currentTimeMillis() - oldTime) + "ms.");
+                        long time = (System.currentTimeMillis() - oldTime);
+            player.sendMessage("§eYour scoreboard has been loaded " + (time > 0L ?  "in §b" + (System.currentTimeMillis() - oldTime) + " milliseconds§e!") : "§binstantly§e!");
+
         }
     }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        player.sendMessage("§eLoading your scoreboard...");
         PlayerScoreboard playerScoreboard = PlayerScoreboard.getScoreboard(player);
         if (playerScoreboard == null) {
             long oldTime = System.currentTimeMillis();
             new PlayerScoreboard(this, player);
-            player.sendMessage(ChatColor.BLUE + "Scoreboard created in " + (System.currentTimeMillis() - oldTime) + "ms.");
+            long time = (System.currentTimeMillis() - oldTime);
+            player.sendMessage("§eYour scoreboard has been loaded " + (time > 0L ?  "in §b" + (System.currentTimeMillis() - oldTime) + " milliseconds§e!") : "§binstantly§e!");
         } else {
 
             if (player.getScoreboard() != playerScoreboard.getScoreboard()) {
