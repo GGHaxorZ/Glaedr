@@ -315,8 +315,7 @@ public class PlayerScoreboard {
                         entry.setTextTime(formatter.format(minutes) + ":" + formatter.format(seconds));
 
                         if (!entry.isRemoveTimeSuffix()) {
-                            toSend = toSend + "m";
-                            entry.setTextTime(formatter.format(minutes) + ":" + formatter.format(seconds) + "m");
+                            entry.setTextTime(formatter.format(minutes) + ":" + formatter.format(seconds));
                         }
 
                         entry.sendScoreboardUpdate(toSend);
@@ -344,8 +343,7 @@ public class PlayerScoreboard {
                     entry.setTextTime(formatter.format(hours) + ":" + formatter.format(minutes) + ":" + formatter.format(seconds));
 
                     if (!entry.isRemoveTimeSuffix()) {
-                        toSend = toSend + "m";
-                        entry.setTextTime(formatter.format(minutes) + ":" + formatter.format(seconds) + "m");
+                        entry.setTextTime(formatter.format(minutes) + ":" + formatter.format(seconds));
                     }
 
                     entry.sendScoreboardUpdate(toSend);
