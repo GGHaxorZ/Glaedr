@@ -1,7 +1,13 @@
 package examples;
 
-import org.bukkit.event.Listener;
-import org.bukkit.event.EventHandler;
+import org.bukkit.event.*;
+import org.bukkit.*;
+import org.bukkit.plugin.java.*;
+import org.bukkit.scheduler.*;
+import com.alexandeh.glaedr.*;
+import com.alexandeh.glaedr.event.*;
+import com.alexandeh.glaedr.scoreboards.*;
+import java.util.*;
 
 public class Example extends JavaPlugin implements Listener //did all that shit using notepad, so please do the imports yourself xD
 {
